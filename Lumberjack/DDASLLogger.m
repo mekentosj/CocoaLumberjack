@@ -1,6 +1,7 @@
 #import "DDASLLogger.h"
 
 #import <libkern/OSAtomic.h>
+#import <asl.h>
 
 /**
  * Welcome to Cocoa Lumberjack!
@@ -18,6 +19,9 @@
 
 
 @implementation DDASLLogger
+{
+    aslclient client;
+}
 
 static DDASLLogger *sharedInstance;
 
